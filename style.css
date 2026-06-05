@@ -1,0 +1,159 @@
+/* --- Document Reset & Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* --- Resume Canvas Container --- */
+.resume-container, body > div, body {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* If you prefer to wrap your HTML content inside a <div class="resume-container">, 
+   the styling above handles it. If you keep the HTML exactly as it is, 
+   the styles below target your raw tags perfectly. */
+
+/* --- Header Section --- */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.55rem;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 0.65rem;
+    color: #5a6c7d;
+    margin-bottom: 4px;
+}
+
+header a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* --- Decorative Divider Line --- */
+hr {
+    border: 0;
+    height: 1px;
+    background: #dcdde1;
+    margin-bottom: 30px;
+}
+
+/* --- Section Structural Framework --- */
+section {
+    margin-bottom: 28px;
+}
+
+section h2 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+}
+
+section p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    text-align: justify;
+}
+
+/* --- Bulleted Lists (Skills, Responsibilities) --- */
+ul {
+    margin-left: 22px;
+    margin-top: 6px;
+}
+
+li {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 5px;
+}
+
+/* --- Grid Fix for Skills Layout --- */
+/* Turns your plain skills list into a neat horizontal row automatically */
+section:nth-of-type(2) ul {
+    list-style-type: none;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+section:nth-of-type(2) li {
+    background: #f1f2f6;
+    padding: 6px 14px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* --- Experience, Education & Projects Articles --- */
+article {
+    margin-bottom: 18px;
+}
+
+article:last-of-type {
+    margin-bottom: 0;
+}
+
+article h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+article p em {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* --- Print Settings Optimization --- */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+    
+    .resume-container, body {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+    }
+}
